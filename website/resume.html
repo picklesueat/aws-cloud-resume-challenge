@@ -5,146 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Joseph S. Gutstadt</title>
     <style>
+        /* Reset some default styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            margin: 0;
+            background-color: #ffffff;
             padding: 20px;
-            background-color: #f4f4f9;
         }
+
+        /* Header Styling */
         .header {
             text-align: center;
-            margin: 10px 0;
-            font-weight: bold;
+            margin-bottom: 30px;
         }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+
+        .contact-info {
+            font-size: 0.95em;
+            color: #555555;
+        }
+
+        .contact-info a {
+            color: #0000EE; /* Standard blue color for links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Download Resume Button */
+        .download-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0000EE; /* Standard blue for button */
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        .download-button:hover {
+            background-color: #0000CC; /* Darker blue on hover */
+        }
+
+        /* Section Titles */
         .section-title {
-            text-align: left; /* Changed from center to left */
             font-size: 1.5em;
             margin-top: 30px;
             margin-bottom: 15px;
-            font-weight: bold; /* Ensure section titles are bold */
+            color: #333333;
+            text-align: left;
+            border-bottom: 1px solid #dddddd;
+            padding-bottom: 5px;
         }
-        .subsection {
-            margin-bottom: 20px;
-        }
+
+        /* Subsection Titles */
         .subsection-title {
+            font-size: 1.1em;
             font-weight: bold;
+            margin-bottom: 5px;
+            color: #333333;
         }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 0.9em;
-        }
+
+        /* Lists */
         ul {
+            list-style-type: disc;
             padding-left: 20px;
+            margin-bottom: 15px;
         }
-        /* Style for the visitor counter box */
+
+        /* Nested Lists for Certifications */
+        .certifications-list {
+            list-style-type: disc;
+            padding-left: 40px; /* Indent certifications for clarity */
+            margin-top: 5px;
+        }
+
+        /* Smaller font size for certification links */
+        .certifications-list li {
+            font-size: 0.9em; /* Adjust font size as needed */
+        }
+
+        /* Visitor Counter Styling */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777777;
+        }
+
         #visitor-counter-box {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #f8f9fa; /* Off-white color */
-            color: #333; /* Dark text for contrast */
-            border: 1px solid #ccc; /* Light gray border */
-            border-radius: 5px; /* Rounded corners */
-            font-size: 1.2em; /* Slightly larger text */
-            font-family: Arial, sans-serif; /* Clean font */
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            background-color: #f8f9fa;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .section-title {
+                font-size: 1.3em;
+            }
+
+            .subsection-title {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Section -->
     <div class="header">
         <h1>Joseph S. Gutstadt</h1>
         <div class="contact-info">
             <a href="mailto:jgutstadt20@gmail.com">jgutstadt20@gmail.com</a> |
-            <a href="https://www.linkedin.com/in/joseph-gutstadt/">LinkedIn</a> |
-            <a href="https://github.com/picklesueat">GitHub</a>
+            <a href="https://www.linkedin.com/in/joseph-gutstadt/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+            <a href="https://github.com/picklesueat" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <a href="https://your-lambda-endpoint.com/download-resume" class="download-button" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+        <!-- Replace 'https://your-lambda-endpoint.com/download-resume' with your actual Lambda function endpoint -->
+    </div>
+
+    <!-- Work Experience Section -->
+    <section>
+        <div class="section-title">Work Experience</div>
+
+        <div class="subsection">
+            <div class="subsection-title">Data Engineer - Egen Solutions (July 2022 - Present)</div>
+            <ul>
+                <li>Collaborated with Product team to lead implementation strategies for DEV and QA teams.</li>
+                <li>Standardized unit tests and data orchestration, identifying and resolving over 50 bugs.</li>
+                <li>Mentored junior team members in data engineering, coding standards, and Snowflake optimization techniques.</li>
+                <li>Designed proofs of concept (POCs) for DBT and Snowflake architecture to enhance performance and usability of DBT models.</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <div class="subsection-title">Technical Solutions Engineer - Epic Systems (June 2021 - July 2022)</div>
+            <ul>
+                <li>Troubleshot technical issues in a large legacy codebase (Mumps, C#, JavaScript) related to potential patient safety concerns.</li>
+                <li>Served as the primary Patient Experience (MyChart) contact for 30 healthcare analysts across multiple organizations.</li>
+                <li>Proposed and implemented improvements in internal tools using VB, SQL, and Mumps, saving 30 hours monthly.</li>
+                <li>Facilitated communication between C-suite executives and lead MyChart developers for complex issue resolution.</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <div class="subsection-title">Math & Computer Science Tutor - Varsity Tutors (Aug. 2019 - June 2021)</div>
+            <ul>
+                <li>Identified knowledge gaps and explained complex technical concepts in advanced Math and CS courses.</li>
+                <li>Assessed student workloads, knowledge, and goals to effectively motivate academic success.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section>
+        <div class="section-title">Education</div>
+
+        <div class="subsection">
+            <div class="subsection-title">MS in Computer Science - Georgia Institute of Technology (Spring '23 - May '25)</div>
+            <ul>
+                <li>Remote, Part-time</li>
+                <li>Coursework: Operating Systems, Intro to Graduate Algorithms</li>
+                <li>GPA: 4.0</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <div class="subsection-title">BA in Mathematics - Colorado College (Aug. 2016 - May 2020)</div>
+            <ul>
+                <li>Coursework: Linear Algebra, Graph Theory, Number Theory</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section>
+        <div class="section-title">Projects</div>
+
+        <div class="subsection">
+            <div class="subsection-title">
+                <a href="https://github.com/picklesueat/data_jobs_data" target="_blank" rel="noopener noreferrer">Job Titles in Data Science</a>
+            </div>
+            <ul>
+                <li>Scraped 30,000 job listings and published a dataset on GitHub utilized by over 75,000 individuals.</li>
+                <li>Leveraged Python and network analysis to categorize and report on data science skill sets.</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <div class="subsection-title">
+                <a href="https://your-cloud-resume-project-link.com" target="_blank" rel="noopener noreferrer">Cloud Resume Project</a>
+            </div>
+            <ul>
+                <li>Developed a cloud-hosted resume utilizing AWS services, including Lambda for dynamic PDF generation and visitor tracking.</li>
+                <li>Implemented an automated HTML-to-PDF conversion process using AWS Lambda and API Gateway, enabling on-demand resume downloads.</li>
+                <li>Integrated a visitor counter leveraging DynamoDB and API Gateway to monitor and store resume views in real-time.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+        <div class="section-title">Skills</div>
+
+        <div class="subsection">
+            <ul>
+                <li><strong>Programming Languages:</strong> Java, Python, C++, C, SQL, HTML/CSS</li>
+                <li><strong>Tools & Platforms:</strong> Git/GitHub, DBT, Snowflake, Dagster, Bash, AWS</li>
+                <li><strong>Certifications:</strong>
+                    <ul class="certifications-list">
+                        <li><a href="https://www.credly.com/badges/68e114d3-7510-4509-a518-eaaccee9554f/public_url" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect – Associate</a></li>
+                        <li><a href="https://www.credly.com/badges/0eab4946-7caf-41f2-8fce-a5d97fb51a85/public_url" target="_blank" rel="noopener noreferrer">SnowPro Core Certification</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer with Visitor Counter -->
+    <div class="footer">
+        <div id="visitor-counter-box">
+            <span id="visitor-counter"><b>Visitor Counter:</b> Loading...</span>
         </div>
     </div>
 
-    <div class="section-title">Work Experience</div>
-
-    <div class="subsection">
-        <div class="subsection-title">Data Engineer - Egen Solutions (July 2022 - Present)</div>
-        <ul>
-            <li>Collaborated with Product team to lead implementation strategies for DEV and QA teams</li>
-            <li>Standardized Unit tests and Data Orchestration, catching over 50 bugs</li>
-            <li>Mentored junior team members in data engineering, coding standards, and Snowflake optimization techniques</li>
-            <li>Designed POCs for DBT and Snowflake architecture to improve performance and usability of DBT models</li>
-        </ul>
-    </div>
-
-    <div class="subsection">
-        <div class="subsection-title">Technical Solutions Engineer - Epic Systems (June 2021 - July 2022)</div>
-        <ul>
-            <li>Troubleshot technical issues in a large legacy codebase (Mumps, C#, JavaScript) for potential patient safety concerns</li>
-            <li>Primary Patient Experience (MyChart) contact for 30 healthcare analysts across multiple organizations</li>
-            <li>Proposed and implemented improvements in internal tools using VB, SQL, and Mumps, saving 30 hours monthly</li>
-            <li>Facilitated communication between C-suite Executives and lead MyChart developers for complex issue resolution</li>
-        </ul>
-    </div>
-
-    <div class="subsection">
-        <div class="subsection-title">Math & Computer Science Tutor - Varsity Tutors (Aug. 2019 - June 2021)</div>
-        <ul>
-            <li>Identified knowledge gaps and explained complex technical concepts in advanced Math and CS courses</li>
-            <li>Assessed student workloads, knowledge, and goals to effectively motivate academic success</li>
-        </ul>
-    </div>
-
-    <div class="section-title">Education</div>
-
-    <div class="subsection">
-        <div class="subsection-title">MS in Computer Science - Georgia Institute of Technology (Spring '23 - May '25)</div>
-        <ul>
-            <li>Remote, Part-time</li>
-            <li>Coursework: Operating Systems, Intro to Graduate Algorithms</li>
-            <li>GPA: 4.0</li>
-        </ul>
-    </div>
-
-    <div class="subsection">
-        <div class="subsection-title">BA in Mathematics - Colorado College (Aug. 2016 - May 2020)</div>
-        <ul>
-            <li>Coursework: Linear Algebra, Graph Theory, Number Theory</li>
-        </ul>
-    </div>
-
-    <div class="section-title">Projects</div>
-
-    <div class="subsection">
-        <div class="subsection-title"><a href="https://github.com/picklesueat/data_jobs_data">Job Titles in Data Science</a></div>
-        <ul>
-            <li>Scraped 30,000 job listings, published dataset on GitHub used by 75,000+ people</li>
-            <li>Used Python and network analysis to group and report on data science skill sets</li>
-        </ul>
-    </div>
-
-    <div class="subsection">
-        <div class="subsection-title"><a href="https://github.com/picklesueat/Abalone">Abalone AI</a></div>
-        <ul>
-            <li>Implemented the board game Abalone in Python using the MVC design pattern</li>
-            <li>Created and optimized an AI using the MiniMax Algorithm that can look 5 moves ahead</li>
-        </ul>
-    </div>
-
-    <div class="section-title">Skills</div>
-
-    <div class="subsection">
-        <ul>
-            <li>Programming Languages: Java, Python, C++, C, SQL, HTML/CSS</li>
-            <li>Tools & Platforms: Git/GitHub, DBT, Snowflake, Dagster, Bash, AWS</li>
-            <li><strong>Certifications:</strong> SnowPro Core Certification</li>
-        </ul>
-    </div>
-
-    <div id="visitor-counter-box">
-        <span id="visitor-counter"><b>Visitor Counter: </b>Loading...</span>
-    </div>
-
-
+    <!-- Visitor Counter Script -->
     <script>
         // Replace with your API Gateway endpoint
         const apiUrl = "https://iwmny5mizh.execute-api.us-east-1.amazonaws.com/default/CRC_increament_visitorcount";
