@@ -11,4 +11,4 @@
 - GitHub Actions
 - Terraform
 - IAM
-- Python
+- Pythons
