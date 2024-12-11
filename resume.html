@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Joseph S. Gutstadt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .header, .section-title {
+            text-align: center;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .subsection {
+            margin-bottom: 20px;
+        }
+        .subsection-title {
+            font-weight: bold;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        /* Style for the visitor counter box */
+        #visitor-counter-box {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f8f9fa; /* Off-white color */
+            color: #333; /* Dark text for contrast */
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 1.2em; /* Slightly larger text */
+            font-family: Arial, sans-serif; /* Clean font */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Joseph S. Gutstadt</h1>
+        <div class="contact-info">
+            <a href="mailto:jgutstadt20@gmail.com">jgutstadt20@gmail.com</a> |
+            <a href="https://www.linkedin.com/in/joseph-gutstadt/">LinkedIn</a> |
+            <a href="https://github.com/picklesueat">GitHub</a>
+        </div>
+    </div>
+
+    <div class="section-title">Work Experience</div>
+
+    <div class="subsection">
+        <div class="subsection-title">Data Engineer - Egen Solutions (July 2022 - Present)</div>
+        <ul>
+            <li>Collaborated with Product team to lead implementation strategies for DEV and QA teams</li>
+            <li>Standardized Unit tests and Data Orchestration, catching over 50 bugs</li>
+            <li>Mentored junior team members in data engineering, coding standards, and Snowflake optimization techniques</li>
+            <li>Designed POCs for DBT and Snowflake architecture to improve performance and usability of DBT models</li>
+        </ul>
+    </div>
+
+    <div class="subsection">
+        <div class="subsection-title">Technical Solutions Engineer - Epic Systems (June 2021 - July 2022)</div>
+        <ul>
+            <li>Troubleshot technical issues in a large legacy codebase (Mumps, C#, JavaScript) for potential patient safety concerns</li>
+            <li>Primary Patient Experience (MyChart) contact for 30 healthcare analysts across multiple organizations</li>
+            <li>Proposed and implemented improvements in internal tools using VB, SQL, and Mumps, saving 30 hours monthly</li>
+            <li>Facilitated communication between C-suite Executives and lead MyChart developers for complex issue resolution</li>
+        </ul>
+    </div>
+
+    <div class="subsection">
+        <div class="subsection-title">Math & Computer Science Tutor - Varsity Tutors (Aug. 2019 - June 2021)</div>
+        <ul>
+            <li>Identified knowledge gaps and explained complex technical concepts in advanced Math and CS courses</li>
+            <li>Assessed student workloads, knowledge, and goals to effectively motivate academic success</li>
+        </ul>
+    </div>
+
+    <div class="section-title">Education</div>
+
+    <div class="subsection">
+        <div class="subsection-title">MS in Computer Science - Georgia Institute of Technology (Spring '23 - May '25)</div>
+        <ul>
+            <li>Remote, Part-time</li>
+            <li>Coursework: Operating Systems, Intro to Graduate Algorithms</li>
+            <li>GPA: 4.0</li>
+        </ul>
+    </div>
+
+    <div class="subsection">
+        <div class="subsection-title">BA in Mathematics - Colorado College (Aug. 2016 - May 2020)</div>
+        <ul>
+            <li>Coursework: Linear Algebra, Graph Theory, Number Theory</li>
+        </ul>
+    </div>
+
+    <div class="section-title">Projects</div>
+
+    <div class="subsection">
+        <div class="subsection-title"><a href="https://github.com/picklesueat/data_jobs_data">Job Titles in Data Science</a></div>
+        <ul>
+            <li>Scraped 30,000 job listings, published dataset on GitHub used by 75,000+ people</li>
+            <li>Used Python and network analysis to group and report on data science skill sets</li>
+        </ul>
+    </div>
+
+    <div class="subsection">
+        <div class="subsection-title"><a href="https://github.com/picklesueat/Abalone">Abalone AI</a></div>
+        <ul>
+            <li>Implemented the board game Abalone in Python using the MVC design pattern</li>
+            <li>Created and optimized an AI using the MiniMax Algorithm that can look 5 moves ahead</li>
+        </ul>
+    </div>
+
+    <div class="section-title">Skills</div>
+
+    <div class="subsection">
+        <ul>
+            <li>Programming Languages: Java, Python, C++, C, SQL, HTML/CSS</li>
+            <li>Tools & Platforms: Git/GitHub, DBT, Snowflake, Dagster, Bash, AWS</li>
+            <li><strong>Certifications:</strong> SnowPro Core Certification</li>
+        </ul>
+    </div>
+
+    <div id="visitor-counter-box">
+        <span id="visitor-counter"><b>Visitor Counter: </b>Loading...</span>
+    </div>
+
+
+    <script>
+        // Replace with your API Gateway endpoint
+        const apiUrl = "https://iwmny5mizh.execute-api.us-east-1.amazonaws.com/default/CRC_increament_visitorcount";
+
+        async function updateVisitorCounter() {
+            try {
+                // Call the API
+                const response = await fetch(apiUrl, {
+                    method: "GET",
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                // Parse the response JSON
+                const data = await response.json();
+
+                // Update the visitor counter on the webpage
+                const visitorCounterElement = document.getElementById("visitor-counter");
+                visitorCounterElement.innerHTML = `<b>Visitor Counter:</b> ${data.UpdatedVisitorCount}`;
+            } catch (error) {
+                console.error("Error updating visitor counter:", error);
+
+                // Show error message
+                const visitorCounterElement = document.getElementById("visitor-counter");
+                visitorCounterElement.innerHTML = "<b>Visitor Counter:</b> Error loading visitor count.";
+            }
+        }
+
+        // Update the visitor counter on page load
+        updateVisitorCounter();
+    </script>
+
+
+</body>
+
+
+
+
+</html>
