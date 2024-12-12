@@ -132,33 +132,6 @@
                 font-size: 1em;
             }
         }
-        @media print {
-                @page {
-                    size: A4; /* Change to 'Letter' if needed */
-                    margin: 10mm;
-                }
-                body {
-                    font-size: 8px; /* Reduced font size */
-                    line-height: 1.2; /* Tighten line spacing */
-                    zoom: 0.5; /* Further scale down */
-                }
-                img {
-                    max-width: 100%;
-                    height: auto;
-                }
-                table {
-                    width: 100%;
-                    table-layout: fixed;
-                }
-                th, td {
-                    font-size: 6px; /* Shrink table text */
-                    word-wrap: break-word;
-                }
-                .no-print {
-                    display: none; /* Hide unwanted elements */
-                }
-        }
-
     </style>
 </head>
 <body>
