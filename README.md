@@ -12,3 +12,9 @@
 - Terraform
 - IAM
 - Python
+
+
+
+
+TODO
+Terraform get functional
