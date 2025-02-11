@@ -73,22 +73,18 @@
             border-bottom: 1px solid #dddddd;
             padding-bottom: 5px;
         }
-
-        /* Subsection Titles */
+        /* Subsection Titles: Reduce bottom margin to tighten gap with following list */
         .subsection-title {
             font-size: 1.1em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 5px;  /* Reduced from 10px */
             color: #333333;
         }
 
-        /* Lists */
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin-bottom: 5px;
+        /* Remove top margin from any ul that immediately follows a subsection title */
+        .subsection-title + ul {
+            margin-top: 0;
         }
-
         /* Nested Lists for Certifications */
         .certifications-list {
             list-style-type: disc;
@@ -117,6 +113,11 @@
             border-radius: 5px;
             font-family: Arial, sans-serif;
         }
+        /* Remove underline from links within list items (including certifications) */
+        li a {
+            text-decoration: none;
+        }
+
 
         /* Responsive Design */
         @media (max-width: 600px) {
@@ -235,12 +236,12 @@
 
         <div class="subsection">
             <ul>
-                <li><strong>Programming Languages:</strong>Python, Java, C++, C, SQL, HTML, CSS, JavaScript</li>
-                <li><strong>Cloud & Data Platforms:</strong>AWS (EC2, S3, Lambda, CloudFormation, RedShift, Lambda, API Gateway, DynamoDB), Snowflake, Azure, GCP</li>
-                <li><strong>Data Engineering:</strong>Data Pipelines, Data Modeling, Data Warehousing, building scalable data pipelines, data infrastructure solutions, ETL/ELT, Data Orchestration (Dagster, Airflow)</li>
-                <li><strong>DevOps & Tools:</strong>Git, GitHub, Bash, Docker, Terraform, Jenkins, DBT, Django, Flask</li>
-                <li><strong>Additional Skills:</strong>Linux, Agile, Scrum, CI/CD, Unit Testing (JUnit, pytest), Test-Driven Development (TDD),  Integration Testing, Confluence, Jira</li>    
-                <li><strong>Certifications:</strong><a href="https://www.credly.com/badges/68e114d3-7510-4509-a518-eaaccee9554f/public_url" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a>,<a href="https://www.credly.com/badges/0eab4946-7caf-41f2-8fce-a5d97fb51a85/public_url" target="_blank" rel="noopener noreferrer">SnowPro Core Certification</a>
+                <li><strong>Programming Languages: </strong>Python, Java, C++, C, SQL, HTML, CSS, JavaScript</li>
+                <li><strong>Cloud & Data Platforms: </strong>AWS (EC2, S3, Lambda, CloudFormation, RedShift, Lambda, API Gateway, DynamoDB), Snowflake, Azure, GCP</li>
+                <li><strong>Data Engineering: </strong>Data Pipelines, Data Modeling, Data Warehousing, building scalable data pipelines, data infrastructure solutions, ETL/ELT, Data Orchestration (Dagster, Airflow)</li>
+                <li><strong>DevOps & Tools: </strong>Git, GitHub, Bash, Docker, Terraform, Jenkins, DBT, Django, Flask</li>
+                <li><strong>Additional Skills: </strong>Linux, Agile, Scrum, CI/CD, Unit Testing (JUnit, pytest), Test-Driven Development (TDD),  Integration Testing, Confluence, Jira</li>    
+                <li><strong>Certifications: </strong><a href="https://www.credly.com/badges/68e114d3-7510-4509-a518-eaaccee9554f/public_url" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a>, <a href="https://www.credly.com/badges/0eab4946-7caf-41f2-8fce-a5d97fb51a85/public_url" target="_blank" rel="noopener noreferrer">SnowPro Core Certification</a>
             </ul>
         </div>
     </section>
