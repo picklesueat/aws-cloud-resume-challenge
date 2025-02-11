@@ -73,30 +73,18 @@
             border-bottom: 1px solid #dddddd;
             padding-bottom: 5px;
         }
-        /* Subsection Titles: Reduce bottom margin to tighten gap with following list */
+        /* Subsection Titles: Minimal gap between title and its content */
         .subsection-title {
             font-size: 1.1em;
             font-weight: bold;
-            margin-bottom: 5px;  /* Reduced from 10px */
-            color: #333333;
+            margin-bottom: 0;  /* Remove any gap below the title */
+            color: #333;
         }
 
-        /* Remove top margin from any ul that immediately follows a subsection title */
+        /* Immediately following ul: Ensure no extra gap above the list */
         .subsection-title + ul {
             margin-top: 0;
         }
-        /* Nested Lists for Certifications */
-        .certifications-list {
-            list-style-type: disc;
-            padding-left: 40px; /* Indent certifications for clarity */
-            margin-top: 5px;
-        }
-
-        /* Smaller font size for certification links */
-        .certifications-list li {
-            font-size: 0.9em; /* Adjust font size as needed */
-        }
-
         /* Visitor Counter Styling */
         .footer {
             text-align: center;
