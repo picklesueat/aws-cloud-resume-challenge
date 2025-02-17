@@ -12,6 +12,7 @@
 - Terraform
 - IAM
 - Python
+- WSL
 
 
 
